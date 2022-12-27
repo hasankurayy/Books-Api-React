@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary-color: #755139FF;
+  --secondary-color: #D4B996FF;
+}
+
+body{
+  background-color: var(--primary-color);
+}
+
+html {
+  font-size: 75.5%;
+}
+
+.header{
+  width: 100%;
+  height: 500px;
+  color: var(--secondary-color);
+  box-shadow: 0 5px 10px var(--secondary-color);
+
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://img-cdn.inc.com/image/upload/w_1920,h_1080,c_fill/images/panoramic/GettyImages-577674005_492115_zfpgiw.jpg");
+  clip-path: circle(60% at left 300px);
+  z-index: -1;
+  opacity: .2;
+}
+
+.row2{
+  position: absolute;
+  top: 10px;
+  right: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row2 h2{
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.row2 img{
+  margin-top: 30px;
+  width: 250px;
+  display: block;
+  opacity: .5;
+}
+
+.row1 h1{
+  font-size: 3rem;
+  text-align: center;
+  margin-left: 35px;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input{
+  outline: 0;
+  border: 0;
+  width: 350px;
+  height: 35px;
+  padding: 0 0.5rem;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.search button {
+  outline: none;
+  border: none;
+  height: 35px;
+  padding: 0 0.5rem;
+  background-color: #fff;
+}
+
+.container{
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,0.4fr));
+  grid-gap: 20px;
+  box-sizing: border-box;
+}
+
+.card{
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 5px rgba(212,185,150,.5);
+  text-align: center;
+  transition: .5s;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(0.9);
+  background-color: rgba(255,255,255,.8);
+  cursor: pointer;
+}
+
+.card img{
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .bottom .title{
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.card .bottom .amount{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.overlay{
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.overlay-inner{
+  background: var(--secondary-color);
+  width: 700px;
+  height: 550px;
+  padding: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  overflow: auto;
+  font-size: 1.3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.inner-box{
+  margin-top: 30px;
+  display: flex;
+}
+
+.overlay-inner .close{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  background-color: transparent;
+}
+
+.overlay-inner .close:hover{
+ transform: scale(1.1);
+ cursor: pointer;
+}
+
+.overlay img{
+  margin-right: 20px;
+  width: 150px;
+  height: 200px;
+}
+
+.inner-box h3{
+  color: green;
+}
+
+.inner-box h4{
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.inner-box button{
+  outline: none;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #24a0ed;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem;
+}
+
+.inner-box button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #24a0ed;
+  transition: .5s;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.description{
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 17px;
+  font-weight: semibold;
+}
+
