@@ -23,6 +23,9 @@ function Main() {
                 </div>
 
                 <div className="row2">
+                    <div className="logo-mine">
+                        <a href="#">HKRY</a>
+                    </div>
                     <h2>Find Your Book</h2>
                     <div className="search">
                         <input type="text" placeholder='Enter Your Book Name'

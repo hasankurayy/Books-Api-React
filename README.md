@@ -1,6 +1,6 @@
 # Run The Project
 
-To run the project click the [link](https://openbookshkuray.surge.sh)
+To run the project click the [link](https://openbookshkry.surge.sh).
 
 ## Description 
 
